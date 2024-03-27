@@ -75,7 +75,7 @@ def load_and_transform_video(
         video_decode_backend='opencv',
         clip_start_sec=0.0,
         clip_end_sec=None,
-        num_frames=8,
+        num_frames=16,
 ):
     if video_decode_backend == 'pytorchvideo':
         #  decord pyav
