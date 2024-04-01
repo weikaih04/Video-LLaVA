@@ -5,11 +5,11 @@ import json
 from tqdm import tqdm
 import shortuuid
 
-from videollava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
-from videollava.conversation import conv_templates, SeparatorStyle
-from videollava.model.builder import load_pretrained_model
-from videollava.utils import disable_torch_init
-from videollava.mm_utils import tokenizer_image_token, get_model_name_from_path, KeywordsStoppingCriteria
+from ..constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
+from ..conversation import conv_templates, SeparatorStyle
+from ..model.builder import load_pretrained_model
+from ..utils import disable_torch_init
+from ..mm_utils import tokenizer_image_token, get_model_name_from_path, KeywordsStoppingCriteria
 
 from PIL import Image
 import math
@@ -33,7 +33,7 @@ def eval_model(args):
     model_name = get_model_name_from_path(model_path)
     tokenizer, model, processor, context_len = load_pretrained_model(model_path, args.model_base, model_name)
     if args.return_gating_logit:
-        from videollava.utils import get_gating_logit_by_hook
+        from ..utils import get_gating_logit_by_hook
         print(model)
         fea_hooks = get_gating_logit_by_hook(model)
         all_gating_logits = {}

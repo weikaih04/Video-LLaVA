@@ -1,11 +1,11 @@
 import torch
 from transformers import TextStreamer
 
-from videollava.constants import IMAGE_TOKEN_INDEX
-from videollava.conversation import conv_templates, SeparatorStyle
-from videollava.mm_utils import get_model_name_from_path, KeywordsStoppingCriteria, tokenizer_image_token
-from videollava.model.builder import load_pretrained_model
-from videollava.utils import disable_torch_init
+from ..constants import IMAGE_TOKEN_INDEX
+from ..conversation import conv_templates, SeparatorStyle
+from ..mm_utils import get_model_name_from_path, KeywordsStoppingCriteria, tokenizer_image_token
+from ..model.builder import load_pretrained_model
+from ..utils import disable_torch_init
 
 title_markdown = ("""
 <div style="display: flex; justify-content: center; align-items: center; text-align: center;">

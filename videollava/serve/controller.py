@@ -18,8 +18,8 @@ import numpy as np
 import requests
 import uvicorn
 
-from videollava.constants import CONTROLLER_HEART_BEAT_EXPIRATION
-from videollava.utils import build_logger, server_error_msg
+from ..constants import CONTROLLER_HEART_BEAT_EXPIRATION
+from ..utils import build_logger, server_error_msg
 
 
 logger = build_logger("controller", "controller.log")

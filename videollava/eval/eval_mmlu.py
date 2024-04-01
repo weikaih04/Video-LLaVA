@@ -146,8 +146,8 @@ def load(ckpt_dir, model_type, cache_dir):
         tokenizer.bos_token_id = 1
 
     elif model_type == 'qwen':
-        from videollava.model.language_model.qwen.tokenization_qwen import QWenTokenizer
-        from videollava.model.language_model.qwen.modeling_qwen import QWenLMHeadModel
+        from ..model.language_model.qwen.tokenization_qwen import QWenTokenizer
+        from ..model.language_model.qwen.modeling_qwen import QWenLMHeadModel
 
         model = QWenLMHeadModel.from_pretrained(ckpt_dir, low_cpu_mem_usage=True, torch_dtype=torch.float16, cache_dir=cache_dir)
         model = tp.tensor_parallel(model, [i for i in range(n_gpus)])
@@ -157,8 +157,8 @@ def load(ckpt_dir, model_type, cache_dir):
         tokenizer.pad_token = tokenizer.unk_token
 
     elif model_type == 'llava':
-        from videollava.mm_utils import get_model_name_from_path
-        from videollava.model.builder import load_pretrained_model
+        from ..mm_utils import get_model_name_from_path
+        from ..model.builder import load_pretrained_model
         load_8bit, load_4bit = False, False
         model_base = None
         model_name = get_model_name_from_path(ckpt_dir)

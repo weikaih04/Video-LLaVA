@@ -27,18 +27,18 @@ import torch
 
 import transformers
 
-from videollava.constants import IGNORE_INDEX, IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, \
+from ..constants import IGNORE_INDEX, IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, \
     DEFAULT_IM_END_TOKEN, DEFAULT_VIDEO_TOKEN, DEFAULT_VID_START_TOKEN, DEFAULT_VID_END_TOKEN, MAX_IMAGE_LENGTH, \
     MAX_VIDEO_LENGTH
 from torch.utils.data import Dataset
-from videollava.train.llava_trainer import LLaVATrainer
+from .llava_trainer import LLaVATrainer
 
-from videollava import conversation as conversation_lib
-from videollava.model import *
-from videollava.mm_utils import tokenizer_image_token
+from .. import conversation as conversation_lib
+from ..model import *
+from ..mm_utils import tokenizer_image_token
 
 from PIL import Image
-from videollava.utils import order_pick_k
+from ..utils import order_pick_k
 
 local_rank = None
 

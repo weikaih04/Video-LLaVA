@@ -21,7 +21,7 @@ import torch.nn as nn
 from .multimodal_encoder.builder import build_image_tower, build_video_tower
 from .multimodal_projector.builder import build_vision_projector
 
-from videollava.constants import IGNORE_INDEX, IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_PATCH_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
+from ..constants import IGNORE_INDEX, IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_PATCH_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
 
 
 class LlavaMetaModel:

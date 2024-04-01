@@ -15,12 +15,12 @@ import torch
 import uvicorn
 from functools import partial
 
-from videollava.constants import WORKER_HEART_BEAT_INTERVAL
-from videollava.utils import (build_logger, server_error_msg,
+from ..constants import WORKER_HEART_BEAT_INTERVAL
+from ..utils import (build_logger, server_error_msg,
     pretty_print_semaphore)
-from videollava.model.builder import load_pretrained_model
-from videollava.mm_utils import process_images, load_image_from_base64, tokenizer_image_token, KeywordsStoppingCriteria
-from videollava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
+from ..model.builder import load_pretrained_model
+from ..mm_utils import process_images, load_image_from_base64, tokenizer_image_token, KeywordsStoppingCriteria
+from ..constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
 from transformers import TextIteratorStreamer
 from threading import Thread
 

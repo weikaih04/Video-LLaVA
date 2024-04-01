@@ -5,9 +5,9 @@ from tqdm import tqdm
 # from video_chatgpt.eval.model_utils import initialize_model, load_video
 # from video_chatgpt.inference import video_chatgpt_infer
 
-from videollava.eval.video.run_inference_video_qa import get_model_output
-from videollava.mm_utils import get_model_name_from_path
-from videollava.model.builder import load_pretrained_model
+from .run_inference_video_qa import get_model_output
+from ...mm_utils import get_model_name_from_path
+from ...model.builder import load_pretrained_model
 
 
 def parse_args():

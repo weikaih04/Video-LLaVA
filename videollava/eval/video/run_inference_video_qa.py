@@ -6,12 +6,12 @@ import json
 import torch
 import transformers
 from tqdm import tqdm
-from videollava.conversation import conv_templates, SeparatorStyle
-from videollava.constants import DEFAULT_IM_START_TOKEN, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_END_TOKEN, IMAGE_TOKEN_INDEX, DEFAULT_VID_START_TOKEN, DEFAULT_VID_END_TOKEN
-from videollava.mm_utils import get_model_name_from_path, tokenizer_image_token, KeywordsStoppingCriteria
-from videollava.model.builder import load_pretrained_model
-from videollava.model.language_model.llava_llama import LlavaLlamaForCausalLM
-from videollava.train.train import smart_tokenizer_and_embedding_resize
+from ...conversation import conv_templates, SeparatorStyle
+from ...constants import DEFAULT_IM_START_TOKEN, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_END_TOKEN, IMAGE_TOKEN_INDEX, DEFAULT_VID_START_TOKEN, DEFAULT_VID_END_TOKEN
+from ...mm_utils import get_model_name_from_path, tokenizer_image_token, KeywordsStoppingCriteria
+from ...model.builder import load_pretrained_model
+from ...model.language_model.llava_llama import LlavaLlamaForCausalLM
+from ...train.train import smart_tokenizer_and_embedding_resize
 
 
 def split_list(lst, n):

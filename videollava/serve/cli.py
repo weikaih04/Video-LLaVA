@@ -3,13 +3,13 @@ import os
 
 import torch
 
-from videollava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN, \
+from ..constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN, \
     DEFAULT_VIDEO_TOKEN
-from videollava.conversation import conv_templates, SeparatorStyle
-from videollava.model.builder import load_pretrained_model
-from videollava.serve.utils import load_image, image_ext, video_ext
-from videollava.utils import disable_torch_init
-from videollava.mm_utils import process_images, tokenizer_image_token, get_model_name_from_path, KeywordsStoppingCriteria
+from ..conversation import conv_templates, SeparatorStyle
+from ..model.builder import load_pretrained_model
+from ..serve.utils import load_image, image_ext, video_ext
+from ..utils import disable_torch_init
+from ..mm_utils import process_images, tokenizer_image_token, get_model_name_from_path, KeywordsStoppingCriteria
 
 from PIL import Image
 

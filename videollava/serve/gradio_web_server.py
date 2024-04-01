@@ -10,9 +10,9 @@ import tempfile
 from decord import VideoReader, cpu
 from transformers import TextStreamer
 
-from videollava.constants import DEFAULT_IMAGE_TOKEN
-from videollava.conversation import conv_templates, SeparatorStyle, Conversation
-from videollava.serve.gradio_utils import Chat, tos_markdown, learn_more_markdown, title_markdown, block_css
+from ..constants import DEFAULT_IMAGE_TOKEN
+from ..conversation import conv_templates, SeparatorStyle, Conversation
+from ..serve.gradio_utils import Chat, tos_markdown, learn_more_markdown, title_markdown, block_css
 
 
 
@@ -245,5 +245,5 @@ with gr.Blocks(title='Video-LLaVA🚀', theme=gr.themes.Default(), css=block_css
 # app = gr.mount_gradio_app(app, demo, path="/")
 demo.launch()
 
-# uvicorn videollava.serve.gradio_web_server:app
-# python -m  videollava.serve.gradio_web_server
+# uvicorn ..serve.gradio_web_server:app
+# python -m  ..serve.gradio_web_server

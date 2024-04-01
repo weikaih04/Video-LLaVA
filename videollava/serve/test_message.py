@@ -3,7 +3,7 @@ import json
 
 import requests
 
-from videollava.conversation import default_conversation
+from ..conversation import default_conversation
 
 
 def main():

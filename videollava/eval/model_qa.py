@@ -6,8 +6,8 @@ import json
 from tqdm import tqdm
 import shortuuid
 
-from videollava.conversation import default_conversation
-from videollava.utils import disable_torch_init
+from ..conversation import default_conversation
+from ..utils import disable_torch_init
 
 
 # new stopping implementation
