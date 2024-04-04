@@ -136,7 +136,7 @@ class LanguageBindVideoProcessor(ProcessorMixin):
             images = make_list_of_images(images)
             image_features = [self.image_processor(image, self.transform,
                                                    video_decode_backend=self.config.vision_config.video_decode_backend,
-                                                   num_frames=self.config.vision_config.num_frames) for image in images]
+                                                   num_frames=16) for image in images] # TODO: make 8 frames to 16 framew will improve perform or not num_frames=self.config.vision_config.num_frames
             image_features = torch.stack(image_features)
 
         if text is not None and images is not None:
